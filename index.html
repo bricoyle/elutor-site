@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elutor</title>
+<meta name="description" content="Elutor is a clinician-operated instrument in development that samples and concentrates salivary MMP-8 to stage canine periodontitis in the awake patient.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16232b;
+    --muted:#55666f;
+    --teal:#0e7c86;
+    --tealdeep:#0a5c64;
+    --tint:#eef5f5;
+    --rule:#d9e0e3;
+    --paper:#ffffff;
+    --maxw:41rem;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"IBM Plex Serif",Georgia,serif;
+    font-size:1.0625rem;
+    line-height:1.65;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 1.25rem}
+  a{color:var(--tealdeep);text-decoration-thickness:1px;text-underline-offset:2px}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+
+  /* Masthead */
+  header{border-bottom:1px solid var(--rule)}
+  .mast{display:flex;align-items:baseline;justify-content:space-between;padding:1.1rem 0}
+  .wordmark{font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:600;font-size:1.15rem;letter-spacing:.01em;color:var(--ink);text-decoration:none}
+  .wordmark span{color:var(--teal)}
+  .mast small{font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--muted);font-size:.8rem}
+
+  /* Hero: the argument */
+  .hero{padding:3.5rem 0 2.75rem;border-bottom:1px solid var(--rule)}
+  .hero p{
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-weight:500;
+    font-size:clamp(1.35rem,3.6vw,1.9rem);
+    line-height:1.3;
+    margin:0 0 1.1rem;
+    max-width:36rem;
+  }
+  .hero p:last-child{margin-bottom:0}
+  .hero .punch{color:var(--teal);font-weight:600}
+  .standfirst{
+    font-family:"IBM Plex Serif",Georgia,serif;
+    font-weight:400;
+    font-size:1.0625rem !important;
+    line-height:1.65 !important;
+    color:var(--muted);
+    margin-top:1.75rem !important;
+  }
+
+  /* Sections */
+  section{padding:2.5rem 0;border-bottom:1px solid var(--rule)}
+  h2{
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    margin:0 0 1rem;
+    color:var(--ink);
+  }
+  p{margin:0 0 1rem}
+  p:last-child{margin-bottom:0}
+  em{font-style:italic}
+
+  /* Video */
+  .videoframe{
+    position:relative;aspect-ratio:16/9;background:var(--tint);
+    border:1px solid var(--rule);margin:1.25rem 0 .5rem;
+  }
+  .videoframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .caption{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);margin-top:.4rem}
+
+  /* Cycle figure */
+  figure{margin:1.5rem 0 0;padding:1.25rem;background:var(--tint);border:1px solid var(--rule)}
+  figure svg{display:block;width:100%;height:auto}
+  figcaption{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted);margin-top:.9rem;line-height:1.5}
+
+  /* Evidence list */
+  dl{margin:0}
+  dt{font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:600;font-size:.95rem;margin-top:1.1rem}
+  dt:first-child{margin-top:0}
+  dd{margin:.25rem 0 0}
+
+  /* The ask */
+  .ask{background:var(--ink);color:#f3f7f8;border-bottom:0}
+  .ask h2{color:#f3f7f8}
+  .ask p{color:#cfdadd}
+  .ask .question{
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:600;
+    font-size:clamp(1.2rem,3vw,1.5rem);line-height:1.35;color:#ffffff;margin-bottom:1rem;
+  }
+  .ask a.mail{
+    display:inline-block;margin-top:.5rem;
+    font-family:"IBM Plex Sans",system-ui,sans-serif;font-weight:600;font-size:1rem;
+    color:#ffffff;background:var(--teal);text-decoration:none;
+    padding:.7rem 1.1rem;
+  }
+  .ask a.mail:hover{background:var(--tealdeep)}
+  .ask .alt{font-size:.9rem;margin-top:1rem}
+  .ask .alt a{color:#9fd4d9}
+
+  footer{padding:1.5rem 0 2.5rem}
+  footer p{font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:.82rem;color:var(--muted)}
+  footer a{color:var(--muted)}
+
+  @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap mast">
+    <a class="wordmark" href="/">Elutor<span>.</span></a>
+    <small>hydrogel-ball biomarker capture &middot; in development</small>
+  </div>
+</header>
+
+<main>
+
+  <div class="wrap hero">
+    <p>If diagnosing heart disease required anesthesia, many cases would never be found.</p>
+    <p>Diagnosing the most common disease in dogs does require anesthesia.</p>
+    <p class="punch">Many cases are never found.</p>
+    <p class="standfirst">Elutor is a clinician-operated instrument in development that samples and
+    concentrates salivary MMP-8 in the awake patient — an objective screening step that tells you
+    which patients need a COHAT, and how soon. It is a front end for anesthetized dentistry,
+    not a substitute for it.</p>
+  </div>
+  <section class="wrap" id="video">
+    <h2>The prototype, in 60 seconds</h2>
+    <div class="videoframe">
+          <iframe src="https://www.youtube.com/embed/Ufe8DAlqqAM"
+    title="Elutor prototype demonstration"
+    referrerpolicy="strict-origin-when-cross-origin"
+    allowfullscreen
+    loading="lazy"></iframe>
+    </div>
+    <p class="caption">Prototype demonstration. Current device; design details subject to change during validation.</p>
+  </section>
+
+  <section class="wrap" id="mechanism">
+    <h2>How it works</h2>
+    <p>A superabsorbent hydrogel sits in a perforated housing at the end of a handheld wand.
+    With the housing in the awake patient's mouth, the practitioner squeezes a trigger that drives a
+    plate against the gel. Each squeeze expresses fluid into the mouth, where it mixes with saliva;
+    each release lets the gel draw the blend back in. Binding ligands immobilized in the gel matrix
+    capture the biomarker on every pass and hold it through the next compression.</p>
+    <p>Four or five cycles — under a minute — progressively concentrate the target, overcoming the
+    dilution that otherwise limits salivary testing. Off the patient, the binding equilibrium is
+    shifted to release the captured protein into solution for assay. Because compression count,
+    force, and timing are in the practitioner's hands, sampling is standardized rather than
+    dependent on patient cooperation.</p>
+    <figure aria-label="Diagram of the four-step capture cycle">
+      <svg viewBox="0 0 720 150" role="img" aria-labelledby="cyc-t">
+        <title id="cyc-t">The capture cycle: compress, mix, reabsorb, bind — repeated four to five times</title>
+        <g font-family="IBM Plex Sans,system-ui,sans-serif" font-size="14" fill="#16232b">
+          <!-- step boxes -->
+          <g>
+            <rect x="8"   y="30" width="150" height="62" fill="#ffffff" stroke="#0e7c86"/>
+            <rect x="196" y="30" width="150" height="62" fill="#ffffff" stroke="#0e7c86"/>
+            <rect x="384" y="30" width="150" height="62" fill="#ffffff" stroke="#0e7c86"/>
+            <rect x="572" y="30" width="140" height="62" fill="#ffffff" stroke="#0e7c86"/>
+          </g>
+          <g font-weight="600">
+            <text x="24" y="54">1&#8201;&#8201;Compress</text>
+            <text x="212" y="54">2&#8201;&#8201;Mix</text>
+            <text x="400" y="54">3&#8201;&#8201;Reabsorb</text>
+            <text x="588" y="54">4&#8201;&#8201;Bind</text>
+          </g>
+          <g fill="#55666f" font-size="12.5">
+            <text x="24" y="76">fluid leaves the gel</text>
+            <text x="212" y="76">blends with saliva</text>
+            <text x="400" y="76">gel takes blend in</text>
+            <text x="588" y="76">ligands hold MMP-8</text>
+          </g>
+          <!-- forward arrows -->
+          <g stroke="#0e7c86" stroke-width="1.5" fill="#0e7c86">
+            <line x1="158" y1="61" x2="188" y2="61"/><path d="M188 61 l-7 -4 v8 z"/>
+            <line x1="346" y1="61" x2="376" y2="61"/><path d="M376 61 l-7 -4 v8 z"/>
+            <line x1="534" y1="61" x2="564" y2="61"/><path d="M564 61 l-7 -4 v8 z"/>
+          </g>
+          <!-- return loop -->
+          <g stroke="#55666f" stroke-width="1.5" fill="none">
+            <path d="M642 92 v28 H78 v-22"/>
+          </g>
+          <path d="M78 92 l-4 8 h8 z" fill="#55666f"/>
+          <text x="300" y="138" fill="#55666f" font-size="12.5">repeated 4&#8211;5 times, concentrating the marker each cycle</text>
+        </g>
+      </svg>
+      <figcaption>Each cycle leaves more biomarker bound in the gel. After sampling, the equilibrium
+      is shifted to elute the captured protein for measurement.</figcaption>
+    </figure>
+  </section>
+
+  <section class="wrap" id="evidence">
+    <h2>The evidence so far</h2>
+    <dl>
+      <dt>The disease burden is established.</dt>
+      <dd>Periodontal disease is widely cited as the most common disease of adult dogs, with studies
+      estimating that most dogs over three years of age are affected — yet staging currently
+      requires probing and radiography under general anesthesia, so most patients are never staged.</dd>
+
+      <dt>MMP-8 is a validated marker.</dt>
+      <dd>Active MMP-8 is among the best-studied salivary biomarkers of periodontitis and is already
+      measured chairside in human dentistry.</dd>
+
+      <dt>Human assays should transfer to the dog.</dt>
+      <dd>Our comparative epitope analysis found 68 of 71 predicted human MMP-8 B-cell epitopes
+      conserved in canine MMP-8 (95.8%), including the region targeted by established anti-MMP-8
+      reagents. (Feline MMP-8, interestingly, does not show the same conservation.) A
+      canine-specific MMP-8 ELISA is also commercially available.</dd>
+
+      <dt>The method is patent-published.</dt>
+      <dd>United States non-provisional and PCT/WIPO applications are published. A second
+      application extends the capture chemistry to additional biomarkers and conditions.
+      <!-- EDIT: add links to your published applications, e.g.
+      <a href="https://patents.google.com/patent/...">US application</a> &middot;
+      <a href="https://patentscope.wipo.int/...">PCT/WIPO</a> -->
+      Patent documentation available on request.</dd>
+
+      <dt>Canine validation is underway.</dt>
+      <dd>Prototype devices binding MMP-8 are being produced for a validation study in dogs. We are
+      deliberately seeking expert scrutiny of the protocol before it is locked.</dd>
+    </dl>
+  </section>
+
+  <section class="wrap ask" id="ask">
+    <div>
+      <h2>An invitation to veterinary dentistry</h2>
+      <p class="question">Where would you expect this approach to fail?</p>
+      <p>That is the question we most need answered — by the people who know periodontal disease
+      best — before validation begins. Two or three sentences by email would be genuinely valuable;
+      a call is welcome if you are curious. We are glad to share the patent documentation and the
+      MMP-8 epitope analysis.</p>
+      <a class="mail" href="mailto:brian@elutor.vet?subject=Elutor%20%E2%80%94%20where%20it%20would%20fail">Email brian@elutor.vet</a>
+      <p class="alt">Practices interested in following the validation data can
+      <a href="mailto:brian@elutor.vet?subject=Keep%20me%20posted%20on%20Elutor%20validation">ask to be kept posted</a>.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <!-- EDIT: your name below; add or remove the Chulites line as you prefer -->
+    <p>Elutor &middot; hydrogel-ball biomarker capture, in development &middot; [Your Name], inventor<br>
+    From the inventor of <a href="https://www.chulites.com">Chulites</a> &middot; &copy; 2026 &middot;
+    Elutor is an investigational device and is not available for sale.</p>
+  </div>
+</footer>
+
+</body>
+</html>
